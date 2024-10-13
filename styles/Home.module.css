@@ -1,0 +1,171 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background: #ea0707;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* For positioning the sidebar */
+    z-index: 1000; /* Ensure header is above the sidebar */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo h1 {
+    margin: 0;
+    color: white;
+
+}
+
+.navItemsDesktop {
+    color: white;
+    display: flex; /* Show nav items for desktop */
+    list-style: none;
+    margin: 0;
+}
+
+.navItemsDesktop li {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+}
+
+.hamburger {
+    display: none; /* Hide hamburger on desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: background 0.3s; /* Smooth transition for bar color */
+}
+
+.barOpen {
+    background: transparent; /* Hide bar when open */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; /* Width of the sidebar */
+    background: #ea0707;
+    transform: translateX(-100%); /* Initially hidden off-screen */
+    transition: transform 0.3s ease; /* Smooth sliding effect */
+    z-index: 900; /* Ensure sidebar is below the header */
+}
+
+.sidebar.active {
+    transform: translateX(0); /* Slide in */
+}
+
+.navItems {
+    color: white;
+    list-style: none;
+    padding: 1rem;
+}
+
+.navItems li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0; /* Padding for clickable area */
+}
+
+.main {
+    padding: 2rem;
+    flex: 1;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Change to your desired card width */
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer; /* Indicate that the card is clickable */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.card img {
+    width: 100%; /* Make image fill the card width */
+    height: 150px; /* Set a fixed height for images */
+    object-fit: cover; /* Crop the image to fit the height without stretching */
+    border-radius: 8px; /* Match the card border radius */
+}
+
+.card h3 {
+    margin-top: 0.5rem; /* Add some space above the title */
+}
+
+
+.card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #ea0707;
+    color: white;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 800; /* Below the sidebar, above the main content */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navItemsDesktop {
+        display: none; /* Hide nav items on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+}
+
+/* Add this to your CSS file */
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    width: 50px; /* Set the size for the logo */
+    height: 50px; /* Ensure it's a square */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits well inside the circle */
+    margin-right: 10px; /* Adds some spacing between the logo and the text */
+}
+
+

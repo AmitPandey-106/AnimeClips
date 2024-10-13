@@ -1,0 +1,92 @@
+.aboutPage {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #f0f4f8, #c8e0f1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    margin: 30px 0 15px;
+    position: relative;
+    animation: slideIn 1s ease-in;
+}
+
+.missionList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.missionItem {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+
+.missionItem:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.communityLinks {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.link {
+    color: #0070f3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #005bb5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
