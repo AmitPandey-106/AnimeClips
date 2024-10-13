@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 
@@ -64,7 +66,7 @@ export default function VideosPage() {
       {/* Display the clicked image and name */}
       {imageUrl && animeName && (
         <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-          <img src={imageUrl} alt={animeName} style={{ width: '200px', height: '300px' }} />
+          <Image src={imageUrl} alt={animeName} width={200} height={250} />
           <h2>{animeName}</h2>
         </div>
       )}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { MongoClient } from 'mongodb';
@@ -27,8 +28,16 @@ export default function Home({ videos }) {
                     <div className={styles.logo}>
                         <Link href="/" passHref>
                             <div className={styles.logoContainer}>
-                                <img src="/elitelogo.jpg" alt="Elite Logo" className={styles.logoImage} />
-                                <h1 className={styles.logoText}>AnimeClips</h1> {/* Apply the logoText class */}
+                                <Image 
+                                    src="/elitelogo.jpg" 
+                                    alt="Elite Logo" 
+                                    width={50} 
+                                    height={50} 
+                                    quality={100} 
+                                    className={styles.logoImage} 
+                                    priority 
+                                />
+                                <h1 className={styles.logoText}>AnimeClips</h1>
                             </div>
                         </Link>
                     </div>
@@ -36,8 +45,7 @@ export default function Home({ videos }) {
                     {/* Desktop Navigation Links */}
                     <ul className={styles.navItemsDesktop}>
                         <li className={styles.navText}><Link href="/">Home</Link></li>
-                        <li className={styles.navText}><a href="/about">About</a></li>
-                        {/* <li><a href="/">More</a></li> */}
+                        <li className={styles.navText}><Link href="/about">About</Link></li>
                     </ul>
 
                     {/* Hamburger Menu for Mobile */}
@@ -55,14 +63,13 @@ export default function Home({ videos }) {
             {/* Sliding Sidebar for Mobile */}
             <div className={`${styles.sidebar} ${isNavOpen ? styles.active : ''}`}>
                 <ul className={styles.navItems}>
-                    <li><Link href="/signin" onClick={closeNav}>Sign In</Link></li>
-                    <li><a href="/about" onClick={closeNav}>About</a></li>
-                    {/* <li><a href="#contact" onClick={closeNav}>Contact</a></li> */}
+                    <li><Link href="/" onClick={closeNav}>Home</Link></li>
+                    <li><Link href="/about" onClick={closeNav}>About</Link></li>
                 </ul>
             </div>
 
             <main className={styles.main}>
-                {/* Card Images */}
+                {/* Card Images with Fixed Size */}
                 <div className={styles.cardContainer}>
                     {videos.map((video) => (
                         <Link
@@ -77,7 +84,14 @@ export default function Home({ videos }) {
                             passHref
                         >
                             <div className={styles.card}>
-                                <img src={video.imageUrl} alt={video.animeName} />
+                                <Image
+                                    src={video.imageUrl}
+                                    alt={video.animeName}
+                                    width={200} // Fixed width
+                                    height={300} // Fixed height
+                                    quality={100} // High image quality
+                                    className={styles.cardImage}
+                                />
                                 <h3>{video.animeName}</h3>
                             </div>
                         </Link>

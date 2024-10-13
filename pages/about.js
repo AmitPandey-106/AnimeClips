@@ -12,7 +12,7 @@ export default function About() {
             <header className={styles.header}>
                 <h1 className={styles.title}>Welcome to AnimeClips</h1>
                 <p className={styles.tagline}>
-                    We're passionate anime enthusiasts dedicated to bringing you the best Twixtor experiences inspired by Japan's vibrant animation.
+                    We&apos;re passionate anime enthusiasts dedicated to bringing you the best Twixtor experiences inspired by Japan&apos;s vibrant animation.
                 </p>
             </header>
 
@@ -42,7 +42,7 @@ export default function About() {
             <section className={styles.whyAnimeSection}>
                 <h2 className={styles.sectionTitle}>Why Anime?</h2>
                 <p>
-                    Anime is more than just entertainment – it's an art form that inspires imagination and creativity. We believe that combining anime with Twixtor technology results in truly mesmerizing experiences.
+                    Anime is more than just entertainment - it&apos;s an art form that inspires imagination and creativity. We believe that combining anime with Twixtor technology results in truly mesmerizing experiences.
                 </p>
             </section>
 
@@ -53,15 +53,15 @@ export default function About() {
                 </p>
                 <ul className={styles.communityLinks}>
                     <li><a href="https://www.instagram.com/ft._.elite/" className={styles.link}>Follow us on Instagram</a></li>
-                    <li><a href="https://www.youtube.com/@ELI_T_E" className={styles.link}>Subscribe to our youtube channel</a></li>
-                    <li><a href="eyt5660@gmail.com " className={styles.link}>Share your thoughts on our forum</a></li>
+                    <li><a href="https://www.youtube.com/@ELI_T_E" className={styles.link}>Subscribe to our YouTube channel</a></li>
+                    <li><a href="mailto:eyt5660@gmail.com" className={styles.link}>Share your thoughts on our forum</a></li>
                 </ul>
             </section>
 
             <section className={styles.contactSection}>
                 <h2 className={styles.sectionTitle}>Get in Touch</h2>
                 <p>
-                    Have questions, feedback, or collaboration ideas? Contact us at eyt5660@gmail.com .
+                    Have questions, feedback, or collaboration ideas? Contact us at eyt5660@gmail.com.
                 </p>
             </section>
 
